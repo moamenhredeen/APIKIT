@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family:"Monda";
+    src: url("../static/fonts/Monda-Regular.ttf") format("truetype");
+}
+
+*{
+    padding:0;
+    margin: 0 ;
+    box-sizing: border-box;
+
+    /* set fonts */
+    font-family: Monda;
+
+    /* colors */
+    --blue-dark: #026670;
+    --blue-light: #9fedd7;
+    --yellow-dark: #fce181;
+    --yellow-light: #fef9c7;
+    --gray-light: #edeae5;
+}
+
+
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
