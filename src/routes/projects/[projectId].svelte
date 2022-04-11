@@ -25,7 +25,7 @@
 
 <div class='project'>
 	<div class='header'>
-		<h1>{project.name}</h1>
+		<h3>{project.name}</h3>
 		<img class='run-icon' src='/static/icons/run.svg' alt=''>
 	</div>
 	<div class='requests'>
@@ -48,18 +48,22 @@
     background-color: var(--blue-dark);
     display: flex;
 
-    h1 {
+    h3 {
 	  width: 100%;
       text-align: center;
       color: white;
       text-transform: uppercase;
-      padding: 10px 0;
+      padding: 5px 0;
     }
 
   }
 
   .requests{
 	padding: 10px;
+	overflow: scroll;
+	position: fixed;
+	top: 100px;
+	bottom: 0;
 
     .request{
       background-color: var(--yellow-light);

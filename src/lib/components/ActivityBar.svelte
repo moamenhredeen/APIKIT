@@ -31,28 +31,25 @@
 <style>
 
     .activity-bar {
-        background-color: var(--yellow-dark);
-        position: fixed;
-        width: 75px;
-        top: 0;
-        bottom: 0;
+        background-color: var(--base1);
         display: flex;
         flex-direction: column;
         align-items: center;
+		width: 100%;
+		height: 100%;
 
     }
 
     .icon {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
         text-align: center;
         cursor: pointer;
-
-
     }
 
+
     .icon:hover {
-        background-color: var(--yellow-light);
+        background-color: var(--base2);
     }
 
     img {

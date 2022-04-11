@@ -22,7 +22,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 75px;
+    left: 50px;
     width: 200px;
     background-color: var(--yellow-light);
     transition: width ease-out 200ms;

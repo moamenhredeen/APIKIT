@@ -9,7 +9,7 @@
 	let suggestions = [];
 	const inputHandler = () => {
 		if (value.trim().length > 0) {
-			suggestions = keywords.filter(el => el.startsWith(value.trim()));
+			suggestions = keywords.filter(el => el.toLowerCase().startsWith(value.trim().toLowerCase()));
 		} else {
 			suggestions = [];
 		}
@@ -81,7 +81,7 @@
     padding: 5px;
     border-radius: 5px;
     outline: none;
-    border: 2px solid var(--gray-light)
+    border: 2px solid var(--gray-light);
   }
 
   .suggestions {

@@ -38,6 +38,14 @@ const projectStore = writable([
                 },
                 {
                     method: "get",
+                    url: "https://jsonplaceholder.typicode.com/posts"
+                },
+                {
+                    method: "get",
+                    url: "https://jsonplaceholder.typicode.com/posts"
+                },
+                {
+                    method: "get",
                     url: "https://jsonplaceholder.typicode.com/posts/1"
                 }
             ]

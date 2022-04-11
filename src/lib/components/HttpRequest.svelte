@@ -1,9 +1,20 @@
 <script>
-	import { Tabs, Tab, TabPanel, TabList } from '../shared/Tabs/tabs.js';
 	import { AutoCompleteInput } from '../shared/Controls/controls';
 	import { headersKeysKeywords, headersValuesKeywords } from '../utils/AutoCompleteKeyWords';
-	import Console from '../shared/Console.svelte';
+	// import { JSONEditor } from 'svelte-jsoneditor';
 
+	// let content = {
+	// 	text: undefined, // used when in code mode
+	// 	json: {
+	// 		array: [1, 2, 3],
+	// 		boolean: true,
+	// 		color: '#82b92c',
+	// 		null: null,
+	// 		number: 123,
+	// 		object: { a: 'b', c: 'd' },
+	// 		string: 'Hello World'
+	// 	}
+	// }
 
 	let requestUrl = '';
 	let response = '';
@@ -56,8 +67,8 @@
 	<div class='request-info'>
 
 		<div class='headers'>
-			<h3 >Headers</h3>
-			<div class=' header-list'>
+			<span class='section-heading'>Headers</span>
+			<div class='header-list'>
 				{#each headerList as headerItem, index}
 					<div class='header'>
 						<div class='control header-key'>
@@ -78,9 +89,10 @@
 		</div>
 
 		<div class='body'>
-			<h3>Body</h3>
+			<span class='section-heading'>Body</span>
 			<div class='body-content'>
 				<textarea/>
+<!--				<JSONEditor/>-->
 			</div>
 		</div>
 
@@ -100,32 +112,31 @@
       justify-content: space-between;
 
       input {
-        padding: 10px 10px;
+        padding: 5px 10px;
         outline: none;
-        font-size: 1.1rem;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 2px;
         border: none;
-        background-color: var(--gray-light);
+        background-color: var(--bg1);
         margin: 0 25px;
 
         &:focus {
-          box-shadow: 0 0 0 1px white, 0 0 0 3px var(--blue-light);
+          box-shadow: 0 0 0 1px white, 0 0 0 3px var(--base2);
         }
       }
 
       .btn {
         cursor: pointer;
-        padding: 10px 15px;
-        font-size: 1.1rem;
-        background-color: var(--blue-light);
-        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: var(--base3);
+		color: var(--fg2);
+        border-radius: 2px;
         border: none;
         outline: none;
 
         &:hover,
         &:active {
-          box-shadow: 0 0 0 1px white, 0 0 0 3px var(--blue-light);
+          box-shadow: 0 0 0 1px white, 0 0 0 3px var(--base3);
         }
       }
     }
@@ -140,15 +151,9 @@
   .headers {
     width: 50%;
     margin: 10px 25px;
-    background-color: var(--blue-20);
-    border-radius: 5px;
+    background-color: var(--bg1);
+    border-radius: 2px;
 
-	h3{
-      border-radius: 5px 5px 0 0;
-      background-color: var(--blue-dark);
-      color: white;
-      text-align: center;
-    }
     .header-list {
       padding: 10px;
       .header {
@@ -181,13 +186,7 @@
   .body{
     width: 50%;
     margin: 10px 25px;
-    border-radius: 5px;
-	h3{
-      border-radius: 5px 5px 0 0;
-      background-color: var(--blue-dark);
-      color: white;
-      text-align: center;
-	}
+    border-radius: 2px;
 	.body-content{
 	  height: 100%;
 	  textarea{
@@ -196,7 +195,17 @@
 		border-radius: 5px;
 		border:none;
 		outline: none;
+		background: var(--bg1);
 	  }
 	}
+  }
+
+
+  .section-heading{
+    display: block;
+    border-radius: 2px;
+    background-color: var(--base2);
+    color: white;
+    text-align: center;
   }
 </style>

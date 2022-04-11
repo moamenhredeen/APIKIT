@@ -7,7 +7,11 @@ const config = {
 		adapter: adapter({}),
 		target: '#svelte',
 		ssr: false,
+		vite:{
+
+		}
 	},
+
 	preprocess: sveltePreprocess(),
 };
 export default config;

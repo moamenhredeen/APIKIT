@@ -8,23 +8,29 @@
 	registerTab(tab);
 </script>
 
-<style>
+<style lang='scss'>
 	button {
-		background-color: var(--gray-light);
+		//background-color: var(--base5);
+	  	background: transparent;
 		border: none;
-		border-bottom: 2px solid transparent;
 		border-radius: 0;
-		margin: 0;
-		padding: 10px 0;
 		outline: none;
-		width: 100%;
-		font-size: 1.1rem;
+		//width: 100%;
+	  	//padding: 4px 0;
 		cursor: pointer;
+	  	margin: 0 5px;
+
+	  &:hover{
+		//background: var(--base4);
+		text-decoration: underline;
+	  }
 	}
-	
+
+
 	.selected {
-		background-color: var(--blue-light);
-		border-bottom: 2px solid var(--blue-dark);
+	  text-decoration: underline;
+		//background-color: var(--base4);
+		//border-bottom: 2px solid var(--base5);
 	}
 </style>
 

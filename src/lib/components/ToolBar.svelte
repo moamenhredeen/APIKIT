@@ -1,6 +1,7 @@
 <script>
 
 	import { SideBarState } from '../Stores/UIState';
+	import Theme from '$lib/components/Theme.svelte';
 
 	let isSideBarOpen;
 	SideBarState.subscribe(state => isSideBarOpen = state);
@@ -18,45 +19,23 @@
 		<img src='/static/icons/clear.svg' alt=''>
 	</div>
 	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
+		<Theme/>
 	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
-	<div class='action'>
-		<img src='/static/icons/clear.svg' alt=''>
-	</div>
+
 </div>
 
 
 <style lang='scss'>
   .tool-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 75px;
-    height: 50px;
-    box-shadow: 0 1px 4px 0 lightgray;
+	background: var(--bg1);
     display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: flex-end;
   }
 
   .tool-bar-small {
-    left: 275px;
+    //left: 250px;
   }
 
   .action {
@@ -65,10 +44,14 @@
     align-items: center;
     height: 100%;
     cursor: pointer;
-	flex-grow: 1;
+	padding: 10px;
+
+	img{
+	  width: 15px;
+	}
 
     &:hover {
-      background-color: var(--yellow-light);
+      background-color: var(--base2);
     }
   }
 </style>

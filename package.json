@@ -21,7 +21,8 @@
 	"dependencies": {
 		"electron-context-menu": "^2.5.0",
 		"electron-serve": "^1.1.0",
-		"electron-window-state": "^5.0.3"
+		"electron-window-state": "^5.0.3",
+		"svelte-jsoneditor": "^0.3.10"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.11",
